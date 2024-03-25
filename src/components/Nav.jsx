@@ -48,7 +48,7 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end *:text-white *:text-lg *:font-semibold">
+      <div className="navbar-end">
         <Link className="btn bg-clr-secondary">Sign In</Link>
         <Link className="btn bg-clr-cyan ml-4">Sign Up</Link>
       </div>

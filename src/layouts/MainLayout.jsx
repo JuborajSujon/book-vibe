@@ -8,7 +8,7 @@ const MainLayout = () => {
       <div className="h-20 py-4">
         <Nav />
       </div>
-      <Button />
+      <Button message="Donate" bgColor="bg-clr-cyan" textColor={"text-white"} />
       <Outlet />
     </div>
   );
