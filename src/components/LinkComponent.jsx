@@ -10,7 +10,7 @@ const LinkComponent = ({
   return (
     <Link
       to={routerLink || ""}
-      className={`btn min-h-8 h-8 px-3 sm:min-h-10 sm:px-5 md:px-6 font-medium sm:font-semibold ${bgColor} ${textColor}`}>
+      className={`btn min-h-8 h-8 px-3 sm:min-h-10 sm:px-5 md:px-7 md:min-h-12 md:h-12 lg:min-h-14 lg:h-14 font-medium sm:font-semibold md:text-lg md:font-bold lg:text-xl ${bgColor} ${textColor}`}>
       {message}
     </Link>
   );

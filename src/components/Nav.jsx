@@ -1,11 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Button from "./Button";
 import LinkComponent from "./LinkComponent";
 
 const Nav = () => {
   return (
-    <div className="fixed top-0 w-full text-clr-primary">
-      <div className="navbar container mx-auto  font-work-sans mt-4 px-4 ">
+    <div className="fixed z-10 top-0 w-full text-clr-primary bg-white">
+      <div className="navbar container mx-auto  font-work-sans mt-3 px-4 ">
         <div className="navbar-start w-full sm:w-1/2 ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
