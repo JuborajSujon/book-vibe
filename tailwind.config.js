@@ -10,7 +10,7 @@ export default {
       colors: {
         "clr-primary": "#131313",
         "clr-secondary": "#23BE0A",
-        "clr-bg-secondary": "#23be0a0d",
+        "clr-bg-secondary": "#F4FCF3",
         "clr-blue": "#328EFF",
         "clr-bg-blue": "#328eff26",
         "clr-orange": "#FFAC33",
