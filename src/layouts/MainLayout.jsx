@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
 import Button from "../components/Button";
+import LinkComponent from "../components/LinkComponent";
 
 const MainLayout = () => {
   return (
@@ -9,6 +10,11 @@ const MainLayout = () => {
         <Nav />
       </div>
       <Button message="Donate" bgColor="bg-clr-cyan" textColor={"text-white"} />
+      <LinkComponent
+        message="Sign In"
+        bgColor="bg-clr-secondary"
+        textColor={"text-white"}
+      />
       <Outlet />
     </div>
   );

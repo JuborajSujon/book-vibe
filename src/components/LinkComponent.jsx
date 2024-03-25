@@ -1,20 +1,26 @@
 import PropTypes from "prop-types";
-
-const Button = ({ message, bgColor, textColor, handlerFunction, ...props }) => {
+import { Link } from "react-router-dom";
+const LinkComponent = ({
+  message,
+  bgColor,
+  textColor,
+  routerLink,
+  ...props
+}) => {
   return (
-    <button
-      onClick={handlerFunction ? () => handlerFunction() : null}
+    <Link
+      to={routerLink || ""}
       className={`btn min-h-8 h-8 px-3 sm:min-h-10 md:min-h-12 sm:px-5 md:px-7 text-sm sm:text-lg font-medium sm:font-semibold ${bgColor} ${textColor}`}>
       {message}
-    </button>
+    </Link>
   );
 };
 
-Button.propTypes = {
+LinkComponent.propTypes = {
   bgColor: PropTypes.string.isRequired,
   textColor: PropTypes.string.isRequired,
   message: PropTypes.string,
   routerLink: PropTypes.string,
-  handlerFunction: PropTypes.func,
 };
-export default Button;
+
+export default LinkComponent;
