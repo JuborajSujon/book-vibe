@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
 import Button from "../components/Button";
 import LinkComponent from "../components/LinkComponent";
+import LinkRoundFull from "../components/LinkRoundFull";
 
 const MainLayout = () => {
   return (
@@ -13,6 +14,11 @@ const MainLayout = () => {
       <LinkComponent
         message="Sign In"
         bgColor="bg-clr-secondary"
+        textColor={"text-white"}
+      />
+      <LinkRoundFull
+        message="Sign Up"
+        bgColor="bg-clr-cyan"
         textColor={"text-white"}
       />
       <Outlet />
