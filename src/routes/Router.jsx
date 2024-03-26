@@ -11,7 +11,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: () => fetch("bookdb.json"),
+        loader: () =>
+          fetch(
+            "https://juborajsujon.github.io/personal-project-api/bookdb.json"
+          ),
       },
       {
         path: "/listedbooks",
@@ -30,7 +33,7 @@ export const router = createBrowserRouter([
         element: <div>Donate</div>,
       },
       {
-        path: "/bookdetails",
+        path: "/:bookId",
         element: <BookDetails />,
       },
     ],
