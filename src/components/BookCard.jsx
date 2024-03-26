@@ -8,7 +8,7 @@ const BookCard = () => {
         <figure className="p-4 rounded-2xl">
           <img
             className="rounded-2xl"
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg"
             alt="Shoes"
           />
         </figure>
@@ -28,10 +28,10 @@ const BookCard = () => {
           <h2 className="card-title mt-5 font-playfair text-lg sm:text-xl md:text-2xl font-bold">
             The Catcher in the Rye
           </h2>
-          <p className="mb-7 mt-3 opacity-80">by: Awlad Hossain</p>
+          <p className="mb-7 mt-3 opacity-80 font-medium">by: Awlad Hossain</p>
           <div className="w-full border-t border-slate-300 border-dashed my-4"></div>
           <div className="card-actions justify-start opacity-80 ">
-            <div className="w-full flex items-center justify-between">
+            <div className="w-full flex items-center justify-between font-medium">
               <p>Fiction</p>
               <p className="flex items-center gap-3">
                 <span>5.0</span>
