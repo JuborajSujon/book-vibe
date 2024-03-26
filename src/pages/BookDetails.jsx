@@ -36,6 +36,14 @@ const BookDetails = () => {
     yearOfPublishing,
   } = book;
 
+  const handleBookReaded = () => {
+    console.log("Book Readed", newId);
+  };
+
+  const handleWishList = () => {
+    console.log("WishList", newId);
+  };
+
   return (
     <div className="container mx-auto font-work-sans p-4">
       <div className="flex flex-col md:flex-row gap-5">
@@ -87,12 +95,14 @@ const BookDetails = () => {
           </div>
           <div className="flex gap-3 mt-4">
             <Button
+              handlerFunction={handleBookReaded}
               message="Read"
               bgColor="bg-white"
               textColor="text-clr-primary"
               extraCss={`border-1 border-slate-300`}
             />
             <Button
+              handlerFunction={handleWishList}
               message="Whitelist"
               bgColor="bg-clr-teal"
               textColor="text-white"
