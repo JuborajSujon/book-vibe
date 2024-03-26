@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import BookDetails from "../pages/BookDetails";
+import ListedBooks from "../pages/ListedBooks";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +19,21 @@ export const router = createBrowserRouter([
       },
       {
         path: "/listedbooks",
-        element: <div>Listed Books</div>,
+        element: <ListedBooks />,
+        loader: () =>
+          fetch(
+            "https://juborajsujon.github.io/personal-project-api/bookdb.json"
+          ),
+        children: [
+          {
+            index: true,
+            element: <div>Read</div>,
+          },
+          {
+            path: "wishlist",
+            element: <div>Wishlist</div>,
+          },
+        ],
       },
       {
         path: "/pagestoread",
