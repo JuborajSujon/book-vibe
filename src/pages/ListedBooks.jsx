@@ -19,6 +19,7 @@ const ListedBooks = () => {
         const id = parseInt(book);
         return books.find((item) => item.bookId === id);
       });
+      handleSort(storebooks);
       setReadBooks(storebooks);
     };
     const handleWishListBooks = () => {
@@ -26,8 +27,35 @@ const ListedBooks = () => {
         const id = parseInt(book);
         return books.find((item) => item.bookId === id);
       });
+      handleSort(storebooks);
       setWishlistBooks(storebooks);
     };
+
+    const handleSort = (data) => {
+      if (sortValue === "Select") {
+        return data;
+      }
+      if (sortValue === "rating") {
+        return data.sort((a, b) =>
+          a.rating > b.rating ? 1 : b.rating > a.rating ? -1 : 0
+        );
+      }
+      if (sortValue === "totalPages") {
+        return data.sort((a, b) =>
+          a.totalPages > b.totalPages ? 1 : b.totalPages > a.totalPages ? -1 : 0
+        );
+      }
+      if (sortValue === "yearOfPublishing") {
+        return data.sort((a, b) =>
+          a.yearOfPublishing > b.yearOfPublishing
+            ? 1
+            : b.yearOfPublishing > a.yearOfPublishing
+            ? -1
+            : 0
+        );
+      }
+    };
+
     handleReadBooks();
     handleWishListBooks();
   }, [sortValue, books]);
