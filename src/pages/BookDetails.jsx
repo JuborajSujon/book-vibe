@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LinkRoundFull from "../components/LinkRoundFull";
 import Button from "../components/Button";
-import LinkComponent from "../components/LinkComponent";
+import {
+  deleteLocalStorageData,
+  getLocalStorageData,
+  setLocalStorageData,
+} from "../utility/localStorage";
+import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -29,19 +35,43 @@ const BookDetails = () => {
     category,
     tags,
     rating,
-    bookId: newId,
     totalPages,
     review,
     publisher,
     yearOfPublishing,
   } = book;
 
+  const toastMsg = {
+    readAddedSuccess: "Books Added To Readlish",
+    readAddedError: "You Have Already Read This Book",
+    wishListAddedSuccess: "Book Added To Wishlist",
+    wishListAddedError: "You Have Already Added This Book",
+  };
+  const {
+    readAddedSuccess,
+    readAddedError,
+    wishListAddedSuccess,
+    wishListAddedError,
+  } = toastMsg;
   const handleBookReaded = () => {
-    console.log("Book Readed", newId);
+    setLocalStorageData("readed", bookId, readAddedError, readAddedSuccess);
+
+    deleteLocalStorageData("wishlist", bookId);
   };
 
   const handleWishList = () => {
-    console.log("WishList", newId);
+    const readedBooks = getLocalStorageData("readed");
+
+    if (readedBooks.includes(bookId)) {
+      toast.error(toastMsg.readAddedError);
+      return;
+    }
+    setLocalStorageData(
+      "wishlist",
+      bookId,
+      wishListAddedError,
+      wishListAddedSuccess
+    );
   };
 
   return (

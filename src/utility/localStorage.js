@@ -11,22 +11,27 @@ export const getLocalStorageData = (keyName) => {
 };
 
 // set local storage data
-export const setLocalStorageData = (keyName, data) => {
+export const setLocalStorageData = (
+  keyName,
+  data,
+  toastMsgError,
+  toastMsgSucc
+) => {
   let savedLocalStoragedata = getLocalStorageData(keyName);
-  const dataExist = savedLocalStoragedata.find((item) => item.id === data.id);
+  const dataExist = savedLocalStoragedata.includes(data);
+  console.log("dataExist", dataExist);
   if (dataExist) {
-    toast.error("Already added to list");
+    toast.error(toastMsgError);
     return;
   }
   savedLocalStoragedata.push(data);
   localStorage.setItem(keyName, JSON.stringify(savedLocalStoragedata));
-  toast.success("List added successfully");
+  toast.success(toastMsgSucc);
 };
 
 // Delete local storage data
 export const deleteLocalStorageData = (keyName, id) => {
   let localStorageData = getLocalStorageData(keyName);
-  const remainingdata = localStorageData.filter((item) => item.id !== id);
+  const remainingdata = localStorageData.filter((item) => item !== id);
   localStorage.setItem(keyName, JSON.stringify(remainingdata));
-  toast.success("List deleted successfully");
 };
