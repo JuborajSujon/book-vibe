@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
 const LinkRoundFull = ({
   message,
@@ -9,11 +8,10 @@ const LinkRoundFull = ({
   ...props
 }) => {
   return (
-    <Link
-      to={routerLink || ""}
+    <span
       className={`btn min-h-7 h-7 px-3 sm:min-h-9 sm:px-5 text-sm font-medium  rounded-full ${bgColor} ${textColor}`}>
       {message}
-    </Link>
+    </span>
   );
 };
 

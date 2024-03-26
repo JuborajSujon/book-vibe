@@ -1,13 +1,14 @@
+import { useLoaderData } from "react-router-dom";
 import BooksContainer from "../components/BooksContainer";
 import Hero from "../components/Hero";
-import SectionHeader from "../components/SectionHeader";
 
 const Home = () => {
+  const books = useLoaderData();
+
   return (
     <>
       <Hero />
-      <SectionHeader />
-      <BooksContainer />
+      <BooksContainer books={books} />
     </>
   );
 };

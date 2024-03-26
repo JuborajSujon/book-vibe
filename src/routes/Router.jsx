@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
+import BookDetails from "../pages/BookDetails";
 
 export const router = createBrowserRouter([
   {
@@ -10,6 +11,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+        loader: () => fetch("bookdb.json"),
       },
       {
         path: "/listedbooks",
@@ -26,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: "/donate",
         element: <div>Donate</div>,
+      },
+      {
+        path: "/bookdetails",
+        element: <BookDetails />,
       },
     ],
   },
