@@ -97,7 +97,7 @@ const BookDetails = () => {
             {tags?.map((tag) => (
               <LinkRoundFull
                 key={tag}
-                message={tag}
+                message={`#${tag}`}
                 bgColor="bg-clr-bg-secondary"
                 textColor="text-clr-secondary"
               />

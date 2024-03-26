@@ -19,7 +19,6 @@ export const setLocalStorageData = (
 ) => {
   let savedLocalStoragedata = getLocalStorageData(keyName);
   const dataExist = savedLocalStoragedata.includes(data);
-  console.log("dataExist", dataExist);
   if (dataExist) {
     toast.error(toastMsgError);
     return;
