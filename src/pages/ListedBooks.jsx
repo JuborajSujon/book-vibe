@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
 import SectionHeader from "./../components/SectionHeader";
 import { getLocalStorageData } from "../utility/localStorage";
 
+export const AssetsContext = createContext();
 const ListedBooks = () => {
   const books = useLoaderData();
   const [tabIndex, setTabIndex] = useState(0);
@@ -101,7 +102,16 @@ const ListedBooks = () => {
               <span>Wishlist Books</span>
             </Link>
           </div>
-          <Outlet />
+
+          <AssetsContext.Provider
+            value={{
+              readBooks,
+              setReadBooks,
+              wishlistBooks,
+              setWishlistBooks,
+            }}>
+            <Outlet context={[readBooks, wishlistBooks]} />
+          </AssetsContext.Provider>
         </div>
       </article>
     </div>

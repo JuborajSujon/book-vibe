@@ -20,12 +20,12 @@ export const setLocalStorageData = (
   let savedLocalStoragedata = getLocalStorageData(keyName);
   const dataExist = savedLocalStoragedata.includes(data);
   if (dataExist) {
-    toast.error(toastMsgError);
+    toastMsgError && toast.error(toastMsgError);
     return;
   }
   savedLocalStoragedata.push(data);
   localStorage.setItem(keyName, JSON.stringify(savedLocalStoragedata));
-  toast.success(toastMsgSucc);
+  toastMsgSucc && toast.success(toastMsgSucc);
 };
 
 // Delete local storage data

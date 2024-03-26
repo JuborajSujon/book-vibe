@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import BookDetails from "../pages/BookDetails";
 import ListedBooks from "../pages/ListedBooks";
+import ReadBooksContainer from "../components/ReadBooksContainer";
+import WishBooksContainer from "../components/WishBooksContainer";
 
 export const router = createBrowserRouter([
   {
@@ -27,11 +29,11 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <div>Read</div>,
+            element: <ReadBooksContainer />,
           },
           {
             path: "wishlist",
-            element: <div>Wishlist</div>,
+            element: <WishBooksContainer />,
           },
         ],
       },

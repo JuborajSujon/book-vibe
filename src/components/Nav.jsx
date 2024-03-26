@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Button from "./Button";
 import LinkComponent from "./LinkComponent";
 
@@ -96,9 +96,11 @@ const Nav = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost hover:bg-green-400 text-xl sm:text-2xl font-bold hover:text-white transition ml-auto sm:ml-0">
+          <Link
+            to="/"
+            className="btn btn-ghost hover:bg-green-400 text-xl sm:text-2xl font-bold hover:text-white transition ml-auto sm:ml-0">
             Book Vibe
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-1 font-medium lg:text-base">
