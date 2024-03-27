@@ -73,13 +73,28 @@ const ListedBooks = () => {
           <select
             defaultValue={"Select"}
             onChange={handleSortChange}
-            className="select  bg-clr-secondary text-white text-lg font-medium">
-            <option value="Select" disabled>
+            className="select bg-clr-secondary text-white text-lg font-medium text-center ">
+            <option
+              className="bg-gray-200 text-clr-primary text-center hidden"
+              value="Select"
+              disabled>
               Sort By
             </option>
-            <option value="rating">Rating</option>
-            <option value="totalPages">Number of pages</option>
-            <option value="yearOfPublishing">Published year</option>
+            <option
+              className="bg-gray-200 text-clr-primary text-center"
+              value="rating">
+              Rating
+            </option>
+            <option
+              className="bg-gray-200 text-clr-primary text-center"
+              value="totalPages">
+              Number of pages
+            </option>
+            <option
+              className="bg-gray-200 text-clr-primary text-center"
+              value="yearOfPublishing">
+              Published year
+            </option>
           </select>
         </div>
         <div className="">
