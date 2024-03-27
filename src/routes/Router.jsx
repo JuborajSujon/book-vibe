@@ -6,6 +6,7 @@ import ListedBooks from "../pages/ListedBooks";
 import ReadBooksContainer from "../components/ReadBooksContainer";
 import WishBooksContainer from "../components/WishBooksContainer";
 import ErrorPage from "../pages/ErrorPage";
+import PagesToRead from "../pages/PagesToRead";
 
 export const router = createBrowserRouter([
   {
@@ -41,7 +42,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/pagestoread",
-        element: <div>Pages to Read</div>,
+        element: <PagesToRead />,
+        loader: () =>
+          fetch(
+            "https://juborajsujon.github.io/personal-project-api/bookdb.json"
+          ),
       },
       {
         path: "/feedback",

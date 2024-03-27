@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AssetsContext } from "../pages/ListedBooks";
 import ReadBookCard from "./ReadBookCard";
+import { getLocalStorageData } from "../utility/localStorage";
 
 const ReadBooksContainer = () => {
   const data = useContext(AssetsContext);
@@ -9,6 +10,12 @@ const ReadBooksContainer = () => {
   const handleDeleteReadBook = (bookId) => {
     const newReadBooks = readBooks.filter((book) => book.bookId !== bookId);
     setReadBooks(newReadBooks);
+
+    const newReadedBooks = getLocalStorageData("readed");
+    const newReadedBooksData = newReadedBooks.filter(
+      (book) => book !== bookId.toString()
+    );
+    localStorage.setItem("readed", JSON.stringify(newReadedBooksData));
   };
 
   return (

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AssetsContext } from "../pages/ListedBooks";
 import WishBookCard from "./WishBookCard";
+import { getLocalStorageData } from "../utility/localStorage";
 
 const WishBooksContainer = () => {
   const data = useContext(AssetsContext);
@@ -9,8 +10,14 @@ const WishBooksContainer = () => {
   const handleDeleteWishBook = (bookId) => {
     const newWishBooks = wishlistBooks.filter((book) => book.bookId !== bookId);
     setWishlistBooks(newWishBooks);
+
+    const newWishedBooks = getLocalStorageData("wishlist");
+    const newWishedBooksData = newWishedBooks.filter(
+      (book) => book !== bookId.toString()
+    );
+    localStorage.setItem("wishlist", JSON.stringify(newWishedBooksData));
   };
-  console.log(wishlistBooks);
+
   return (
     <div className="mt-8 pb-10 space-y-8">
       {wishlistBooks.length === 0 ? (

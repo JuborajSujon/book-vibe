@@ -38,19 +38,19 @@ const ListedBooks = () => {
       }
       if (sortValue === "rating") {
         return data.sort((a, b) =>
-          a.rating > b.rating ? 1 : b.rating > a.rating ? -1 : 0
+          b.rating > a.rating ? 1 : a.rating > b.rating ? -1 : 0
         );
       }
       if (sortValue === "totalPages") {
         return data.sort((a, b) =>
-          a.totalPages > b.totalPages ? 1 : b.totalPages > a.totalPages ? -1 : 0
+          b.totalPages > a.totalPages ? 1 : a.totalPages > b.totalPages ? -1 : 0
         );
       }
       if (sortValue === "yearOfPublishing") {
         return data.sort((a, b) =>
-          a.yearOfPublishing > b.yearOfPublishing
+          b.yearOfPublishing > a.yearOfPublishing
             ? 1
-            : b.yearOfPublishing > a.yearOfPublishing
+            : a.yearOfPublishing > b.yearOfPublishing
             ? -1
             : 0
         );
