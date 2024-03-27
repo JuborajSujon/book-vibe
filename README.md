@@ -2,9 +2,9 @@
 
 Welcome to Book Vibe - your ultimate destination for discovering and exploring your favorite books online!
 
-:globe_with_meridians: Live Site - Netlify: [www.bookvibe.com](https://bookvibeph8.netlify.app/)
+:globe_with_meridians: Live Site - Netlify: [bookvibeph8.netlify.app](https://bookvibeph8.netlify.app/)
 
-:globe_with_meridians: Live Site - Surge: [www.bookvibe.com](https://bookvibeph8.surge.sh/)
+:globe_with_meridians: Live Site - Surge: [https://bookvibeph8.surge.sh/](https://bookvibeph8.surge.sh/)
 
 ## Features and Characteristics: :card_index:
 
