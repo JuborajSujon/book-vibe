@@ -2,7 +2,7 @@
 
 Welcome to Book Vibe - your ultimate destination for discovering and exploring your favorite books online!
 
-:globe_with_meridians: Live Site: [www.bookvibe.com](https://www.bookvibe.com)
+:globe_with_meridians: Live Site: [www.bookvibe.com](https://bookvibeph8.netlify.app/)
 
 ## Features and Characteristics: :card_index:
 
