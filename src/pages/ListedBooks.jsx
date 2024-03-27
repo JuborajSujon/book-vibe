@@ -79,7 +79,7 @@ const ListedBooks = () => {
             </option>
             <option value="rating">Rating</option>
             <option value="totalPages">Number of pages</option>
-            <option value="yearOfPublishing">Publisher year</option>
+            <option value="yearOfPublishing">Published year</option>
           </select>
         </div>
         <div className="">

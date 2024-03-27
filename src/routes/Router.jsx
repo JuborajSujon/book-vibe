@@ -5,11 +5,13 @@ import BookDetails from "../pages/BookDetails";
 import ListedBooks from "../pages/ListedBooks";
 import ReadBooksContainer from "../components/ReadBooksContainer";
 import WishBooksContainer from "../components/WishBooksContainer";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
