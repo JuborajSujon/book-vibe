@@ -83,7 +83,7 @@ const BookDetails = () => {
             className="w-full md:w-3/5 object-cover rounded-lg shadow-2xl"
           />
         </div>
-        <div className="w-full md:w-1/2 pl-10 pr-5 text-clr-primary">
+        <div className="w-full md:w-1/2 md:pl-6 lg:pl-10 pr-5 text-clr-primary">
           <h1 className="text-4xl font-playfair font-bold mb-4">{bookName}</h1>
           <p className="font-medium">By: {author}</p>
           <div className="w-full border-t border-slate-300  my-3"></div>

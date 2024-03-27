@@ -12,7 +12,7 @@ const ReadBooksContainer = () => {
   };
 
   return (
-    <div className="mt-8 space-y-8">
+    <div className="mt-8 pb-10 space-y-8">
       {readBooks.length === 0 ? (
         <h1 className="text-3xl mt-20 font-bold text-center">No Read Books</h1>
       ) : (

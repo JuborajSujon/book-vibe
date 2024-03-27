@@ -12,7 +12,7 @@ const WishBooksContainer = () => {
   };
   console.log(wishlistBooks);
   return (
-    <div>
+    <div className="mt-8 pb-10 space-y-8">
       {wishlistBooks.length === 0 ? (
         <h1 className="text-3xl mt-20 font-bold text-center">No Wish Books</h1>
       ) : (

@@ -14,7 +14,7 @@ const Hero = () => {
             </h1>
 
             <LinkComponent
-              bgColor="bg-green-400"
+              bgColor="bg-clr-secondary"
               textColor="text-white"
               message="View The List"
               routerLink="/listedbooks"

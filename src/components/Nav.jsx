@@ -1,6 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
 import Button from "./Button";
-import LinkComponent from "./LinkComponent";
 
 const Nav = () => {
   return (
@@ -83,12 +82,12 @@ const Nav = () => {
                 </NavLink>
               </li>
               <li className="mt-5 flex flex-row justify-around">
-                <LinkComponent
+                <Button
                   message="Sign In"
                   bgColor="bg-clr-secondary"
                   textColor="text-white"
                 />
-                <LinkComponent
+                <Button
                   message="Sign Up"
                   bgColor="bg-clr-cyan"
                   textColor="text-white"
