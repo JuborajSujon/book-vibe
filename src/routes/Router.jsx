@@ -8,6 +8,7 @@ import WishBooksContainer from "../components/WishBooksContainer";
 import ErrorPage from "../pages/ErrorPage";
 import PagesToRead from "../pages/PagesToRead";
 import FeedBack from "../pages/FeedBack";
+import Donate from "./../pages/Donate";
 
 export const router = createBrowserRouter([
   {
@@ -55,7 +56,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/donate",
-        element: <div>Donate</div>,
+        element: <Donate />,
       },
       {
         path: "/:bookId",
