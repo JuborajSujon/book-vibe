@@ -1,5 +1,13 @@
 import PropTypes from "prop-types";
-import { BarChart, Bar, XAxis, YAxis } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
 import { getLocalStorageData } from "../utility/localStorage";
 import { useEffect, useState } from "react";
 const ShapeBar = ({ fetchData }) => {
@@ -29,14 +37,39 @@ const ShapeBar = ({ fetchData }) => {
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
+  const renderCustomBarLabel = ({
+    payload,
+    x,
+    y,
+    width,
+    height,
+    value,
+    fill,
+  }) => {
+    return (
+      <text x={x + width / 2} y={y} fill={fill} textAnchor="middle" dy={-6}>
+        {`${value}`}
+      </text>
+    );
+  };
 
   return (
-    <div>
-      <BarChart width={600} height={300} data={chartData}>
-        <XAxis dataKey="bookName" />
-        <YAxis />
-        <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} />
-      </BarChart>
+    <div className=" h-full w-full flex justify-center items-center">
+      <ResponsiveContainer width="80%" aspect={2}>
+        <BarChart data={chartData}>
+          <XAxis dataKey="bookName" />
+          <YAxis />
+          <CartesianGrid stroke="#999" strokeDasharray="5 5" />
+          <Bar
+            dataKey="totalPages"
+            shape={<TriangleBar />}
+            label={renderCustomBarLabel}>
+            {chartData.map((item) => (
+              <Cell fill={item.fill} key={item.bookId} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };
