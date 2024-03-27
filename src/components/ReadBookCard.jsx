@@ -5,7 +5,7 @@ import { FiUsers } from "react-icons/fi";
 import { AiOutlineFileText } from "react-icons/ai";
 import LinkRoundFullReal from "./LinkRoundFullReal";
 
-const ReadBookCard = ({ readBooks }) => {
+const ReadBookCard = ({ readBooks, handleDeleteReadBook }) => {
   const {
     image,
     bookName,
@@ -19,7 +19,7 @@ const ReadBookCard = ({ readBooks }) => {
     yearOfPublishing,
   } = readBooks;
   return (
-    <section className=" text-clr-primary border rounded-lg border-gray-200 p-6">
+    <section className="relative text-clr-primary border rounded-lg border-gray-200 p-6">
       <div className="container flex flex-col mx-auto lg:flex-row gap-4 lg:gap-10">
         <div className="w-full md:w-1/3">
           <img className="h-64 mx-auto rounded-md" src={image} alt={bookName} />
@@ -33,14 +33,16 @@ const ReadBookCard = ({ readBooks }) => {
             <div className="flex flex-col sm:flex-row sm:items-center  gap-6">
               <div className="flex items-center gap-2">
                 <span className="text-sm font-bold">Tags:</span>
-                {tags.map((tag) => (
-                  <LinkRoundFull
-                    key={tag}
-                    bgColor="bg-clr-bg-secondary"
-                    textColor="text-clr-secondary"
-                    message={`#${tag}`}
-                  />
-                ))}
+                <div className="flex flex-col sm:flex-row gap-2">
+                  {tags.map((tag) => (
+                    <LinkRoundFull
+                      key={tag}
+                      bgColor="bg-clr-bg-secondary"
+                      textColor="text-clr-secondary"
+                      message={`#${tag}`}
+                    />
+                  ))}
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <CiLocationOn size={20} />
@@ -82,12 +84,34 @@ const ReadBookCard = ({ readBooks }) => {
           </div>
         </div>
       </div>
+      <div
+        className="absolute -top-4 -right-4 sm:top-4 sm:right-4 tooltip"
+        data-tip="Delete">
+        <button
+          onClick={() => handleDeleteReadBook(bookId)}
+          className="btn btn-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
     </section>
   );
 };
 
 ReadBookCard.propTypes = {
   readBooks: PropTypes.object.isRequired,
+  handleDeleteReadBook: PropTypes.func.isRequired,
 };
 
 export default ReadBookCard;
