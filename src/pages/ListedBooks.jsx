@@ -68,7 +68,7 @@ const ListedBooks = () => {
   return (
     <div className="container px-6 mt-4 mx-auto">
       <article className="">
-        <SectionHeader />
+        <SectionHeader textInner="Books" />
         <div className="text-center mb-5">
           <select
             defaultValue={"Select"}

@@ -7,6 +7,7 @@ import ReadBooksContainer from "../components/ReadBooksContainer";
 import WishBooksContainer from "../components/WishBooksContainer";
 import ErrorPage from "../pages/ErrorPage";
 import PagesToRead from "../pages/PagesToRead";
+import FeedBack from "../pages/FeedBack";
 
 export const router = createBrowserRouter([
   {
@@ -50,7 +51,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/feedback",
-        element: <div>Feedback</div>,
+        element: <FeedBack />,
       },
       {
         path: "/donate",
