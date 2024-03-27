@@ -69,7 +69,7 @@ const ListedBooks = () => {
     <div className="container px-6 mt-4 mx-auto">
       <article className="">
         <SectionHeader />
-        <div className="text-center">
+        <div className="text-center mb-5">
           <select
             defaultValue={"Select"}
             onChange={handleSortChange}
