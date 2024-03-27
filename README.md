@@ -33,7 +33,7 @@ Welcome to Book Vibe - your ultimate destination for discovering and exploring y
 1. Clone the repository from GitHub:
 
 ```
-git clone https://github.com/programming-hero-web-course4/book-vibe.git
+git clone https://github.com/programming-hero-web-course-4/b9a8-book-vibe-JuborajSujon.git
 ```
 
 2. Navigate to the project directory:
