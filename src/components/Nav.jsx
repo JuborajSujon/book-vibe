@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
+import { FaHeart } from "react-icons/fa";
 import Button from "./Button";
 
 const Nav = () => {
@@ -78,7 +79,7 @@ const Nav = () => {
                       ? "border border-clr-secondary text-clr-secondary hover:text-white"
                       : ""
                   }>
-                  Donate
+                  Donate <FaHeart size={20} color="#FF0000" />
                 </NavLink>
               </li>
               <li className="mt-5 flex flex-row justify-around">
@@ -154,14 +155,15 @@ const Nav = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "border border-clr-secondary text-clr-secondary hover:text-white"
-                    : ""
+                    : "flex flex-row items-center"
                 }>
                 Donate
+                <FaHeart className="-ml-1" size={20} color="#FF0000" />
               </NavLink>
             </li>
           </ul>
         </div>
-        <div className="navbar-end space-x-2 hidden sm:flex">
+        <div className="navbar-end ml-5 space-x-2 hidden sm:flex">
           <Button
             message="Sign In"
             bgColor="bg-clr-secondary"
