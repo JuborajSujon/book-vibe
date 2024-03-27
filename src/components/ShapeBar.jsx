@@ -53,6 +53,16 @@ const ShapeBar = ({ fetchData }) => {
     );
   };
 
+  if (chartData.length === 0) {
+    return (
+      <div className="container mt-8 mx-auto min-h-[80vh] bg-gray-100 rounded-lg flex justify-center items-center">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+          No readed book yet
+        </h1>
+      </div>
+    );
+  }
+
   return (
     <div className=" h-full w-full flex justify-center items-center">
       <ResponsiveContainer width="80%" aspect={2}>

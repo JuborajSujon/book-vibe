@@ -71,8 +71,8 @@ const Donate = () => {
                 other
               </button>
             </div>
-            <div className="form-control w-[90%]">
-              <label className="label cursor-pointer">
+            <div className="form-control  w-[90%]">
+              <label className="label flex flex-row justify-start cursor-pointer">
                 <input
                   type="checkbox"
                   defaultChecked
@@ -88,7 +88,7 @@ const Donate = () => {
             </div>
             <div className="w-[90%]">
               <label className="label flex flex-col items-start gap-3">
-                <span className="label-text">Your Email</span>
+                <span className="label-text font-bold">Your Email</span>
                 <input
                   type="text"
                   placeholder="Email"
