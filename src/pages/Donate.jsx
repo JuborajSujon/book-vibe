@@ -15,7 +15,7 @@ const Donate = () => {
               alt="poor children"
             />
           </div>
-          <div className="w-full pl-5 ml-8 border-l-4 border-l-red-600 pr-16">
+          <div className="w-full pl-5 ml-8 border-l-4 border-l-red-600 pr-16 text-slate-700">
             <h1 className="text-lg md:text-3xl font-bold mb-3 mt-6">
               Transform a life for as little as $15 a month
             </h1>
@@ -33,7 +33,7 @@ const Donate = () => {
           </div>
         </div>
         <div className=" h-full w-full p-8">
-          <div className="flex flex-col items-center p-4 border-2 border-slate-200 rounded-lg shadow-md">
+          <div className="flex flex-col items-center p-4 border-2 border-slate-200 text-slate-700 rounded-lg shadow-md">
             <div className="space-x-3">
               <Button
                 bgColor="bg-clr-secondary"
@@ -92,7 +92,7 @@ const Donate = () => {
                 <input
                   type="text"
                   placeholder="Email"
-                  className="input input-bordered w-full"
+                  className="input bg-white input-bordered w-full"
                 />
               </label>
               <div className="ml-1">

@@ -11,7 +11,7 @@ const Button = ({
   return (
     <button
       onClick={handlerFunction ? () => handlerFunction() : null}
-      className={`btn min-h-8 h-8 px-3 sm:min-h-10 sm:px-5 md:px-6 font-medium sm:font-semibold  hover:text-clr-primary ${bgColor} ${textColor} ${
+      className={`btn min-h-8 h-8 px-3 hover:text-white sm:min-h-10 sm:px-5 md:px-6 font-medium sm:font-semibold ${bgColor} ${textColor} ${
         extraCss || "border-none"
       }`}>
       {message}

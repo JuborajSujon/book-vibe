@@ -77,7 +77,7 @@ const BookDetails = () => {
   return (
     <div className="container mx-auto font-work-sans p-4">
       <div className="flex flex-col md:flex-row gap-5">
-        <div className="w-full sm:w-1/2  bg-base-200 rounded-xl md:flex md:items-center md:justify-center">
+        <div className="w-full sm:w-1/2  bg-gray-200 rounded-xl md:flex md:items-center md:justify-center">
           <img
             src={image}
             className="w-full md:w-3/5 object-cover rounded-lg shadow-2xl"

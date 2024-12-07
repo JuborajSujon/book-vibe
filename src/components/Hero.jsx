@@ -2,7 +2,7 @@ import LinkComponent from "./LinkComponent";
 const Hero = () => {
   return (
     <div className="mt-4 container mx-auto px-4">
-      <div className="hero lg:h-[70vh] bg-base-200 rounded-xl">
+      <div className="hero lg:h-[70vh] bg-gray-200 rounded-xl">
         <div className="hero-content flex-col lg:flex-row-reverse ">
           <div className=" ">
             <img

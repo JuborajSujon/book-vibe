@@ -27,7 +27,7 @@ const FeedBack = () => {
     toast.success("Thanks for your feedback");
   };
   return (
-    <div className="container mx-auto px-4 mt-6">
+    <div className="container mx-auto px-4 mt-6 pb-20">
       <SectionHeader textInner="Feedback" />
       <div>
         <section className="py-6 bg-gray-200 text-clr-primary rounded-md">

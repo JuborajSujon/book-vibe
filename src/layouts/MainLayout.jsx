@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="bg-white">
       <div className="h-20">
         <Nav />
       </div>
